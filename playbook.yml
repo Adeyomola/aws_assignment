@@ -1,0 +1,9 @@
+---
+- name: Creating Two EC2 Instances Behind Elastic Application Load Balance
+  hosts: localhost
+  connection: local
+  become: true
+  roles:
+    - createInstances
+#    - createLoadBalancer
+#    - createTargetGroup

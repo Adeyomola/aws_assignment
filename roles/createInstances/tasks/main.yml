@@ -1,0 +1,13 @@
+---
+# tasks file for roles
+- name: Create Instance
+  ec2_instance:
+    name: Server-LB
+    state: present
+    image_id: ami-0574da719dca65348 
+    count: 2
+    instance_type: t2.micro
+    security_group: launch-wizard-3
+    vpc_subnet_id: 
+    user_data: user_data.sh
+    key_name: windows11
